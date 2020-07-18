@@ -1,0 +1,16 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+    <nav class="topNav">
+        <a href="{% url "home" %}" class="logo"><img src="{% static 'Images/Notesapp.png' %}" alt="" class="logo"></a>
+        <a href="{% url 'login' %}" class="login">Login</a>
+    </nav>
+    <section class="main">
+        <h2 class="mainHead">
+            A lightweight webapp that allows you to hide and protect
+            your notes and provides you with the power of accessing
+            them from any place any time.
+        </h2>
+        <a href="{% url 'register' %}" class="signUp">Sign Up</a>
+    </section>
+{% endblock content %}

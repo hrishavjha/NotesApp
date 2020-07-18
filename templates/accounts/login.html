@@ -1,0 +1,18 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="mainCont">
+        <div class="loginNav">
+            <a href="{% url 'home' %}" class="logo"><img src="{% static 'Images/Notesapp.png' %}" alt="" class="logo"></a>
+        </div>
+        <div class="formCont">
+            <form action="" class="login">{% csrf_token %}
+                <input type="email" name="email" id="email" class="email login" placeholder="Email">
+                <input type="password" name="password" id="password" class="password login" placeholder="Password">
+                <button type="submit" class="loginBtn">Login</button>
+                <p class="signUp">Not having an account? <a href="{% url 'register'%}" class="signUpLink">Register</a></p>
+            </form>
+
+        </div>
+    </div>
+{% endblock %}
