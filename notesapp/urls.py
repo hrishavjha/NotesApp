@@ -6,6 +6,7 @@ from django.contrib.auth.views import LogoutView
 
 from home.views import *
 from accounts.views import *
+from dashboard.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -13,6 +14,7 @@ urlpatterns = [
     path('', homeView, name="home"),
     path('login/', loginView, name="login"),
     path('register/', register_view, name="register"),
+    path('dashboard/', dashView, name="dashboard"),
 ]
 
 if settings.DEBUG:

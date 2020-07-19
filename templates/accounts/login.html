@@ -6,8 +6,8 @@
             <a href="{% url 'home' %}" class="logo"><img src="{% static 'Images/Notesapp.png' %}" alt="" class="logo"></a>
         </div>
         <div class="formCont">
-            <form action="" class="login">{% csrf_token %}
-                <input type="email" name="email" id="email" class="email login" placeholder="Email">
+            <form action="" class="login" method="POST">{% csrf_token %}
+                <input type="text" name="username" id="username" class="username login" placeholder="Username">
                 <input type="password" name="password" id="password" class="password login" placeholder="Password">
                 <button type="submit" class="loginBtn">Login</button>
                 <p class="signUp">Not having an account? <a href="{% url 'register'%}" class="signUpLink">Register</a></p>
