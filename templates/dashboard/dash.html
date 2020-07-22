@@ -1,1 +1,13 @@
-Hello
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+    <nav class="topNav dashNav">
+        <a href="{% url "home" %}" class="logo"><img src="{% static 'Images/Notesapp.png' %}" alt="" class="logo"></a>
+        <a href="{% url 'logout' %}" class="login">Logout</a>
+    </nav>
+    <div class="details">
+        {{ notes.title }}<br>
+        {{ notes.content }}<br>
+        {{ notes.doc }}<br>
+    </div>
+{% endblock %}

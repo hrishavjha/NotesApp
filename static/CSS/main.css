@@ -147,3 +147,12 @@ a.signUpLink{
     text-decoration: none;
     color: #303F9F;
 }
+
+/*DASHBOARD*/
+
+nav.dashNav{
+    position: initial!important;
+}
+div.details{
+
+}

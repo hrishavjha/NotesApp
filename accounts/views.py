@@ -17,8 +17,10 @@ def register_view(request):
 			if user.count() > 0:
 				return render(request, 'accounts/register.html', {'error': 'Username is already taken.'})
 			else:
-				user = User.objects.create_user(username=request.POST.get('username'), password=password,
-												first_name=request.POST.get('name'))
+				full_name = request.POST.get('name')
+				newName = full_name.split()
+				user = User.objects.create_user(username=request.POST.get('username'), password=password, first_name=newName[0],
+												last_name=newName[1])
 				user.save()
 				user = auth.authenticate(username=request.POST['username'], password=request.POST['password'])
 				auth.login(request, user)
