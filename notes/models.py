@@ -7,7 +7,7 @@ class Notes(models.Model):
 		User, null=True,
 		on_delete=models.CASCADE,
 	)
-	doc = models.DateTimeField(auto_now=True)
+	doc = models.DateTimeField(auto_now=True, blank=False, null=False)
 	content = models.TextField(max_length=None, blank=False, null=False)
 	title = models.CharField(max_length=400, blank=False, null=False)
 

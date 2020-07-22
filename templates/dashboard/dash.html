@@ -6,8 +6,19 @@
         <a href="{% url 'logout' %}" class="login">Logout</a>
     </nav>
     <div class="details">
-        {{ notes.title }}<br>
-        {{ notes.content }}<br>
-        {{ notes.doc }}<br>
+        <h2 class="name">Hey {{ user.first_name }}!</h2>
+        <div class="cta">
+            <a href="#" class="noteSub">Create Note</a>
+            <a href="#" class="settings"><img src="{% static 'Images/settings.svg' %}" alt="" class="settings" title="Settings"></a>
+        </div>
+    </div>
+    <div class="notes-cont">
+        {% for eachNote in notes %}
+            <div class="noteBlock">
+                <h2 class="noteTitle">{{ eachNote.title }}</h2>
+                <p class="noteContent">{{ eachNote.content }}</p>
+                <p class="noteTime">{{ eachNote.doc }}</p>
+            </div>
+        {% endfor %}
     </div>
 {% endblock %}

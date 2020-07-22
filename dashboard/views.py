@@ -7,7 +7,7 @@ def dashView(request):
 	if request.user.is_authenticated:
 		user = User.objects.get(username=request.user.username)
 		try:
-			notes = Notes.objects.get(user=request.user)
+			notes = Notes.objects.filter(user=request.user)
 		except Notes.DoesNotExist:
 			notes = None
 		context ={
@@ -17,3 +17,7 @@ def dashView(request):
 		}
 		return render(request, 'dashboard/dash.html', context)
 	return redirect("/login/")
+
+
+def addNotes(request):
+	pass

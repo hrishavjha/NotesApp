@@ -154,5 +154,72 @@ nav.dashNav{
     position: initial!important;
 }
 div.details{
-
+    background-color: #464646;
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h2.name{
+    color: #fafafa;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+}
+div.notes-cont{
+    padding: 20px 50px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+div.noteBlock{
+    background-color: #303F9F;
+    padding: 30px;
+    margin: 10px;
+    border-radius: 8px;
+}
+h2.noteTitle{
+    color: #fafafa;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #fafafa;
+}
+p.noteContent{
+    color: #fafafa;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 200;
+    font-size: 15px;
+    display: block;
+    margin-bottom: 10px;
+}
+p.noteTime{
+    color: #fafafa;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 200;
+    font-size: 12px;
+    display: block;
+    border-top: 1px solid #fafafa;
+}
+div.cta{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+a.noteSub{
+    color: #464646;
+    background-color: #fafafa;
+    padding: 8px 10px;
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+img.settings{
+    width: 25px;
+    height: 25px;
+    margin-top: 3px;
 }
